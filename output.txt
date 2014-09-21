@@ -1,0 +1,8 @@
+Original data:
+12 6 8 10 y10392467
+22 16 18 20 w20392467
+32 26 28 30 j30392467
+42 36 38 40 a40392467
+52 46 48 50 b50392467
+Result:
+length    width     depth_s   depth_d   customerID          time(hours)    
