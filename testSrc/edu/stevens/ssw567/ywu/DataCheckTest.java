@@ -1,3 +1,6 @@
+//SSW-567 group 1, Assignment #4
+//Developed by Yanjun Wu, Han Wang, Slavik, Xingsheng Shi
+
 package edu.stevens.ssw567.ywu;
 
 import org.junit.After;

@@ -1,4 +1,6 @@
-//Yanjun Wu-SSW567-Assignment_2
+//SSW-567 group 1, Assignment #4
+//Developed by Yanjun Wu, Han Wang, Slavik, Xingsheng Shi
+
 package edu.stevens.ssw567.ywu;
 
 import java.io.BufferedReader;
@@ -9,16 +11,36 @@ import java.io.InputStreamReader;
 
 
 public class DataCheck {
-	private int intData[] = new int[100];
+	private static int intData[] = new int[100];
 	
 	public static void main(String [] args) throws IOException{
 		DataCheck d = new DataCheck();
+		
 		BufferedReader reader = null;
 		try{
 			reader = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
 			String str = null;
 			while ((str = reader.readLine()) != null) {
-				System.out.println(d.Check(str));
+				
+				Pool pool = new Pool();
+				boolean flag = d.Check(str);
+				if(flag == true)
+				{
+					System.out.println("correct:");
+					System.out.println("Customer" + "	" + "Area" + "	" + "Day(s)" +"	"+ "Hour(s)"+"	"+"Minute(s)");
+					String[] strT = str.split(" ");
+					pool.setLength(Integer.parseInt(strT[0]));
+					pool.setWidth(Integer.parseInt(strT[1]));
+					pool.setDepth_shallow(Integer.parseInt(strT[2]));
+					pool.setDepth_deep(Integer.parseInt(strT[3]));
+					pool.setCID(strT[4]);
+					pool.calcArea();
+					pool.setDay();
+					pool.setHour();
+					pool.setMinute();
+					System.out.println(pool.getCID()+ "		" + pool.getArea() + "	"+ pool.getDay()+"	"+ pool.getHour()+"	"+pool.getMinute());
+					
+				}
 				}
 			}catch (FileNotFoundException e){
 				e.printStackTrace();
@@ -35,6 +57,7 @@ public class DataCheck {
 	}
 	
 	public boolean Check(String str){
+		System.out.println("input:");
 		System.out.println(str);
 		String[] strT = str.split(" ");
 		int l = strT.length;
