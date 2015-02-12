@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="testSrc"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Stevens Institute of Technology/2014Fall/SSW-567/findbugs-3.0.0/lib/findbugs.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

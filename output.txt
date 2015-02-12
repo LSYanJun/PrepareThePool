@@ -1,8 +1,40 @@
-Original data:
-12 6 8 10 y10392467
-22 16 18 20 w20392467
-32 26 28 30 j30392467
-42 36 38 40 a40392467
-52 46 48 50 b50392467
-Result:
-length    width     depth_s   depth_d   customerID          time(hours)    
+Input...
+Input sequence: length, width, depth of shallow end, depth of deep end, customer.
+127000000 66 80 270 ywu29
+ywu29           length out of range(10~500)!
+ywu29           Depth of shallow end out of range(3~10)!
+ywu29           Depth of deep end out of range(5~30)!
+55 -40 5 10 ctu
+ctu             -40 is not a positive number!
+ctu             width out of range(3~300)!
+150 880 7 -15 hwang#$%
+hwang#$%        Customer Id contains invalid character! Only a name with or without number(s) allowed.
+hwang#$%        -15 is not a positive number!
+hwang#$%        width out of range(3~300)!
+hwang#$%        Depth of deep end out of range(5~30)!
+hwang#$%        length should be greater than width!
+hwang#$%        Depth of deep end should be greater than Depth of shallow end!
+225 155 9 20 Slavik4798
+270 188 %10 25 xshi
+xshi            %10 is not a positive integer!
+a 10 10 10 Emma
+Emma            a is not a positive integer!
+Emma            Depth of deep end should be greater than Depth of shallow end!
+10 % 10 10 Sam
+Sam             % is not a positive integer!
+Sam             length should be greater than width!
+Sam             Depth of deep end should be greater than Depth of shallow end!
+15 10 8.9 10 Kim
+Kim             8.9 is not a positive integer!
+Kim             Depth of deep end should be greater than Depth of shallow end!
+10 10 10 Harry
+Input line 9 error! only 5 inputs of each line is acceptable!
+10 20 10 15 Potter
+Potter          length should be greater than width!
+20 10 6 8 Emily
+
+output:
+customer                  area    day   hour    minute     water(gal)    day   hour    minute  Date(MM/DD/YYYY)
+========            ==========    ===   ====    ======     ==========    ===   ====    ======  ===================
+Slavik4798            45936.00     38      1        40     3652106.26    304      2         3  03/09/2016 at 10:03
+Emily                   620.00      0      3         6        9724.00      0      5        43  04/02/2015 at 14:43
